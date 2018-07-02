@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<!-- We have so far used ng-app without specifying a module name. It worked by creating a default module, but you cannot access it. S0, when you need to register anything, you need to create your own module 
+
+angular.module -> is a global place for creating , registering and retrieving angular modules
+-> A module is a collection of directives, comnponents, controllers and other stuff
+
+-->
+<html lang="en" ng-app='myApp' >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +14,24 @@
     <script src="js/angular-1.7.js"></script>
 </head>
 <body ng-init="hourOfDay = 10">
-    <h1>Hello Angular</h1>
-    <p ng-if="hourOfDay < 12">Good Morning</p>
-    <p ng-if="hourOfDay > 17">Good Evening</p>
-    <p>The hour of the day is- <span ng-bind="hourOfDay"></span></p>
+    <div ng-controller="mainCtrl">
+        <h1>Hello Angular</h1>
+        <p ng-if="hourOfDay < 12">Good Morning</p>
+        <p ng-if="hourOfDay > 17">Good Evening</p>
+        <p>The hour of the day is- <span ng-bind="hourOfDay"></span></p>
 
-    <p>The hour of the day is- <span>{{hourOfDay}}</span></p>
+        <p>The hour of the day is- <span>{{hourOfDay}}</span></p>
+    </div>
+
+    <script>
+        function main(){
+            console.log('main function called');
+        } 
+
+        var module = angular.module('myApp',[]) ; // creating a module 
+        module.controller('mainCtrl',main);  // register the module
+        
+    </script>
 </body>
 </html>
 
