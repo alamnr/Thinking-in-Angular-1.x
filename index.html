@@ -13,7 +13,7 @@ angular.module -> is a global place for creating , registering and retrieving an
     <title>Thinking in Angular 1.x</title>
     <script src="js/angular-1.7.js"></script>
 </head>
-<body ng-init="hourOfDay = 10">
+<body>
     <div ng-controller="mainCtrl">
         <h1>Hello Angular</h1>
         <p ng-if="hourOfDay < 12">Good Morning</p>
@@ -24,7 +24,10 @@ angular.module -> is a global place for creating , registering and retrieving an
     </div>
 
     <script>
-        function main(){
+        // Dependency Injection, Angular inject the $scope obj as dependency to the registered b module controller method - main
+        function main($scope){
+
+            $scope.hourOfDay = 18;
             console.log('main function called');
         } 
 
