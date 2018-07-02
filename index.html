@@ -11,6 +11,9 @@
     <h1>Hello Angular</h1>
     <p ng-if="hourOfDay < 12">Good Morning</p>
     <p ng-if="hourOfDay > 17">Good Evening</p>
+    <p>The hour of the day is- <span ng-bind="hourOfDay"></span></p>
+
+    <p>The hour of the day is- <span>{{hourOfDay}}</span></p>
 </body>
 </html>
 
@@ -25,4 +28,9 @@
   # ng-if  -  remove and recreate a portion  of the   DOM tree based on an expression
            - Element is added to the DOM if expression evaluates to true
            - if expression is false, element doesn't get added to the  DOM
+
+  # ng-bind  - Allows you to add value of a  variable into the markup
+             <span ng-bind='userName'></span>
+             Shorthand of ng-bind is - <span>{{userName}}</span>
+              {{expression}}  -   expression evaluates against scope
 -->
