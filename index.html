@@ -7,8 +7,22 @@
     <title>Thinking in Angular 1.x</title>
     <script src="js/angular-1.7.js"></script>
 </head>
-<body>
+<body ng-init="hourOfDay = 10">
     <h1>Hello Angular</h1>
-    <p ng-if="true">Good Morning</p>
+    <p ng-if="hourOfDay < 12">Good Morning</p>
+    <p ng-if="hourOfDay > 17">Good Evening</p>
 </body>
 </html>
+
+<!-- Angular Directive 
+  # ng-app - Auto bootstrap an Angular JS Application
+           - Designates the root element of the application.
+           - You can use ng-app in any  HTML element, not necessarily in <html> as  we did. That element becomes the root node for your angular application
+           - Multiple applications per page okay but requires manual bootstrap 
+  # ng-init - Initialization Code
+            - Evaluate Expressions
+            - Don't use this
+  # ng-if  -  remove and recreate a portion  of the   DOM tree based on an expression
+           - Element is added to the DOM if expression evaluates to true
+           - if expression is false, element doesn't get added to the  DOM
+-->
