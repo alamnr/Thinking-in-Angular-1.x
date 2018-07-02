@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Clock App</title>
     <script src="../js/angular-1.7.js"></script>
+    <script src="../js/app.js"></script>
 </head>
 <body>
     <h1>Clock App</h1>
@@ -13,18 +14,11 @@
         <p ng-bind="timeString"></p>
 
         <p>Current time is - {{timeString}}</p>
+        <button ng-click="updateTime()">Update Time</button>
     </div>
 
     <script>
-        var app = angular.module('clockApp',[]);
-        app.controller('TimeCtrl',getTime);
         
-        function getTime($scope){
-            var currentDate = new Date();
-            $scope.timeString = currentDate.toTimeString();
-            
-        }
-
 
     </script>
 </body>
