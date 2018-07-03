@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="nestedController">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nested Controllers and Scope Hierarchy</title>
+    <script src="../js/angular-1.7.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <h1>Nested Controllers App</h1>
+    <!-- Root  Scope -->
+    <!-- <div ng-init="testProp=10"></div>
+    <p>{{testProp}}</p> -->
+
+    <!-- Child Scope -->
+    <!-- <div ng-controller="Ctrl1">
+        <p ng-bind="testProp"></p>
+
+    </div> 
+
+    <div ng-controller="Ctrl2">
+            <p ng-bind="testProp"></p>
+    </div> -->
+
+    <!-- Scope Hierarchy -->
+    <div ng-controller="Ctrl1">
+            <p ng-bind="testProp"></p>
+            <div ng-controller="Ctrl2">
+                    <p ng-bind="testProp"></p>
+            </div>
+        </div> 
+    
+        
+</body>
+</html>
