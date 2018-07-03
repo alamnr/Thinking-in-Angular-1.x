@@ -25,12 +25,20 @@
     </div> -->
 
     <!-- Scope Hierarchy -->
-    <div ng-controller="Ctrl1">
+    <!-- <div ng-controller="Ctrl1">
             <p ng-bind="testProp"></p>
             <div ng-controller="Ctrl2">
                     <p ng-bind="testProp"></p>
             </div>
-        </div> 
+        </div>  -->
+        <!-- Controler as  -->
+        <div ng-controller="Ctrl1 as c1">
+                <p ng-bind="c1.testProp"></p>
+                <div ng-controller="Ctrl2 as c2">
+                        <p ng-bind="c2.testProp"></p>
+                </div>
+            </div> 
+        
     
         
 </body>
