@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ngModelExample">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ng model Example</title>
+    <script src="../js/angular-1.7.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-controller="ExamplesCtrl">
+    <h1>NgModel example App</h1>
+    <p>Text Box : <input type="text" ng-change="textChange()" ng-model="textString"></p>
+    <p>Text Box : <input type="text" ng-change="textChange()" ng-model="textString"></p>
+    <p>Text Box : <input type="text" ng-change="textChange()" ng-model="textString"></p>
+    <p>Check Box : <input type="checkbox" ng-model="booleanValue"></p>
+    <p>Date : <input type="date" ng-model="dateValue"></p>
+    <p>Radio : <input type="radio" ng-model="redioValue" value="opt1">Option 1
+        <input type="radio" ng-model="redioValue" value="opt2">Option 2
+        <input type="radio" ng-model="redioValue" value="opt3">Option 3
+    
+    </p>
+
+    <div>
+        <p>Text input : {{textString}}</p>
+        <p>Checkbox input : {{booleanValue}} </p>
+        <p>Date input : {{dateValue}} </p>
+        <p>Radio input : {{redioValue}} </p>
+    </div>
+</body>
+</html>
