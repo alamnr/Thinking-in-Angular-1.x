@@ -11,12 +11,12 @@ app.controller('Ctrl2',($scope)=>{
 
 
 
-app.controller('Ctrl1',()=>{
+app.controller('Ctrl1', function(){
     
     this.testProp  = 'From controller 1';
 });
 
-app.controller('Ctrl2',()=>{
+app.controller('Ctrl2',function(){
    
    this.testProp  = 'From controller 2';
 });
