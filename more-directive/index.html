@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="moreDirectiveApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>More Directive App</title>
+    <script src="../js/angular-1.7.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <h1>More Directive App</h1>
+    <div ng-controller="moreDirectivesCtrl as ctrl">
+        <input type="checkbox" ng-model="ctrl.checked">
+        <!-- in case of ng-if , engular removes the element from DOM -->
+        <p ng-if="ctrl.checked">Some content</p>
+
+        <!-- in case of ng-show , it add  a class and angular set the css display property block or none, does not remove the element -->
+        <p ng-show="ctrl.checked">Ng Show</p>
+
+        <!-- in case of ng-show , it add  a class and angular set the css display property block or none, does not remove the element -->
+        <p ng-hide="!ctrl.checked">Ng Hide</p>
+    </div>
+    
+</body>
+</html>
