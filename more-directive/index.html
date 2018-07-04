@@ -20,6 +20,25 @@
 
         <!-- in case of ng-show , it add  a class and angular set the css display property block or none, does not remove the element -->
         <p ng-hide="!ctrl.checked">Ng Hide</p>
+
+        <!-- ngRepeat creates new scope for each element -->
+        <!-- when you notice ng-scope class being applied to an element, it's a hint that a scope is being created. This is purely for debugging and does not affect on the functionality-->
+        <!-- Unlike a classic for-loop, an ng-repeat loop creates multiple copies of HTML elements that all need to exist concurrently, at the same time -->
+        <p ng-repeat="value in ctrl.myList ">Hello  - {{value}}</p>
+
+
+        <div ng-repeat="obj in ctrl.userList ">
+        
+            <hr>    
+            <p>Element - {{$index+1}}</p>
+            <p>First : {{$first}}</p>
+            <p>Last : {{$last}}</p>
+            <p >Name  - {{obj.name}}</p>
+            <p>Age - {{obj.age}} </p>
+                
+
+        </div>
+        
     </div>
     
 </body>
